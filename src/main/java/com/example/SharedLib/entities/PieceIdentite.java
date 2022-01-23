@@ -4,7 +4,6 @@ import java.util.Date;
 
 import javax.persistence.*;
 
-
 import com.example.SharedLib.enums.TypePieceIdentite;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;

@@ -4,6 +4,7 @@ import java.util.Date;
 
 import javax.persistence.*;
 
+
 import com.example.SharedLib.enums.TypeCompte;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -20,7 +21,6 @@ public class Compte {
 	private double montant;
 	@ManyToOne
 	@JoinColumn(name="idClient")
-	@JsonIgnoreProperties("comptes")
 	private Client client;
 	private Date date_ouverture;
 	@Enumerated(EnumType.STRING)

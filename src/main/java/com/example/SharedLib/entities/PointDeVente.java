@@ -23,6 +23,7 @@ import lombok.NoArgsConstructor;
 @Data @NoArgsConstructor @AllArgsConstructor
 public class PointDeVente extends LieuDeTravail{
 	
+
 	@OneToMany(targetEntity=Agent.class,mappedBy="pointdevente")
 	@JsonIgnoreProperties({"pointdevente"})
 	private List<Agent> agents;

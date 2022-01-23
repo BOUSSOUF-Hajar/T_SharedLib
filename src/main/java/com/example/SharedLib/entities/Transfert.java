@@ -46,8 +46,8 @@ public class Transfert {
 	@JsonIgnoreProperties({"transfert","pointdevente"})
 	private Agent agent;
 	private String pays_d_emission;
-	@OneToOne
-	@JoinColumn(name="beneficiaire_id",referencedColumnName="idClient")
+	@ManyToOne
+	@JoinColumn(name="beneficiaire_id")
 	@JsonIgnoreProperties({"transfert"})
 	private Beneficiaire beneficiaire;
 	@Enumerated(EnumType.STRING)

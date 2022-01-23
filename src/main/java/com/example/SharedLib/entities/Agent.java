@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.persistence.*;
 
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import lombok.Data;
@@ -20,5 +21,5 @@ public class Agent extends Client {
 	private PointDeVente pointdevente;
 	@JsonIgnoreProperties({"agent"})
 	@OneToMany(targetEntity=Transfert.class,mappedBy = "agent")
-	private List<Transfert> transfert;
+	private List<Transfert> transferts;
 }
