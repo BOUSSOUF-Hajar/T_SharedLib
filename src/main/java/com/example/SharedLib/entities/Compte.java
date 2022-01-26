@@ -16,11 +16,12 @@ import lombok.*;
 @Data @NoArgsConstructor @AllArgsConstructor @Getter @Setter
 public class Compte {
 	@Id @GeneratedValue(strategy=GenerationType.IDENTITY)
-	@JsonProperty(access=Access.READ_ONLY)
+	
 	private long idCompte;
 	private double montant;
 	@ManyToOne
 	@JoinColumn(name="idClient")
+	@JsonIgnoreProperties({"comptes"})
 	private Client client;
 	private Date date_ouverture;
 	@Enumerated(EnumType.STRING)
