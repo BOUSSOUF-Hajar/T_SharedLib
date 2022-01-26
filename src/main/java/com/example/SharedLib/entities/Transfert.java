@@ -20,7 +20,7 @@ import lombok.NoArgsConstructor;
 @Data @NoArgsConstructor @AllArgsConstructor
 public class Transfert {
 	@Id @GeneratedValue(strategy=GenerationType.IDENTITY)
-	@JsonProperty(access=Access.READ_ONLY)
+	
 	private long id;
 	private String reference;
 	private String codePin;
