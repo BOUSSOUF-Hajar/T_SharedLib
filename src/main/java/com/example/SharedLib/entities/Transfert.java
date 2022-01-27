@@ -20,7 +20,7 @@ import lombok.NoArgsConstructor;
 @Data @NoArgsConstructor @AllArgsConstructor
 public class Transfert {
 	@Id @GeneratedValue(strategy=GenerationType.IDENTITY)
-	@JsonProperty(access=Access.READ_ONLY)
+	
 	private long id;
 	private String reference;
 	private String codePin;
@@ -65,4 +65,6 @@ public class Transfert {
 	@JsonIgnoreProperties({"transfert_demandes","transfert_servis","agents"})
 	private LieuDeTravail lieuDeDemande;
 	private boolean notification=false;
+	private String motifRestitution;
+	private String motifblocage;
 }
