@@ -21,7 +21,6 @@ public class Compte {
 	private double montant;
 	@ManyToOne
 	@JoinColumn(name="idClient")
-	@JsonIgnoreProperties({"comptes"})
 	private Client client;
 	private Date date_ouverture;
 	@Enumerated(EnumType.STRING)
