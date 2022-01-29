@@ -21,6 +21,8 @@ public class Client {
 	private String nom;
 	private String prenom;
 	private String telephone;
+	private String password;
+	private String role;
 	@OneToOne
     @JoinColumn(name = "piece_id", referencedColumnName = "id")
 	@JsonIgnoreProperties({"client"})
