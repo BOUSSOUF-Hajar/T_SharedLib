@@ -13,7 +13,7 @@ import lombok.*;
 @Entity
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 @Table(name="Client")
-@Data @NoArgsConstructor @AllArgsConstructor @Setter @Getter
+@Data @NoArgsConstructor @AllArgsConstructor
 public class Client {
 	@Id @GeneratedValue
 	//@JsonProperty(access=Access.READ_ONLY)
@@ -21,6 +21,8 @@ public class Client {
 	private String nom;
 	private String prenom;
 	private String telephone;
+	private String password;
+	private String role;
 	@OneToOne
     @JoinColumn(name = "piece_id", referencedColumnName = "id")
 	@JsonIgnoreProperties({"client"})
